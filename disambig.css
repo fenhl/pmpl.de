@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: "Trebuchet MS", Trebuchet, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+.disambig,
+.footnote {
+    text-decoration: underline;
+    color: black;
+    font-size: 14pt;
+}
+
+a:hover {
+    color: blue;
+}
+
+.disambig {
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    /* border-radius: 5px; */
+    margin: 0 5px;
+    background-position: center bottom;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.disambig:not(:hover) {
+    filter: grayscale(100%);
+}
+
+a.footnote {
+    display: block;
+    max-width: 900px;
+    min-width: 165px;
+    margin: 5px auto 0 auto;
+}
+
+a.footnote#first {
+    border-top: 1px solid black;
+    margin-top: 20px
+}
