@@ -10,13 +10,14 @@ server {
 server {
     server_name pmpl.de;
 
-    listen 443 ssl;
-    listen [::]:443 ssl;
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
 
     ssl_certificate /etc/letsencrypt/live/inwx/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/inwx/privkey.pem;
 
-    add_header Strict-Transport-Security "max-age=604800" always;
+    # DO NOT add includeSubdomains or preload here, as it would break http.pmpl.de which needs to stay reachable via unencrypted HTTP
+    add_header Strict-Transport-Security "max-age=2592000" always;
 
     location / {
         root /opt/git/github.com/fenhl/pmpl.de/master;
