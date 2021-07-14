@@ -16,7 +16,8 @@ server {
     ssl_certificate /etc/letsencrypt/live/inwx/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/inwx/privkey.pem;
 
-    add_header Strict-Transport-Security "max-age=2592000" always;
+    # DO NOT add includeSubdomains or preload here, as it would break http.pmpl.de which needs to stay reachable via unencrypted HTTP
+    add_header Strict-Transport-Security "max-age=63072000" always;
 
     return 301 https://pmpl.de$request_uri;
 }

@@ -17,7 +17,7 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/inwx/privkey.pem;
 
     # DO NOT add includeSubdomains or preload here, as it would break http.pmpl.de which needs to stay reachable via unencrypted HTTP
-    add_header Strict-Transport-Security "max-age=2592000" always;
+    add_header Strict-Transport-Security "max-age=63072000" always;
 
     location / {
         root /opt/git/github.com/fenhl/pmpl.de/master;
