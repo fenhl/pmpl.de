@@ -20,6 +20,6 @@ server {
     add_header Strict-Transport-Security "max-age=63072000" always;
 
     location / {
-        root /opt/git/github.com/fenhl/pmpl.de/master;
+        root /opt/git/github.com/fenhl/pmpl.de/main;
     }
 }
